@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'IRANSansWeb.woff2';
+    src: url('../fonts/woff2/IRANSansWeb.woff2') format('woff');
+  }
+
+  @font-face {
+    font-family: YekanBakh-Bold;
+    src: url('./YekanBakh-Bold.woff') format('woff');
+  }
