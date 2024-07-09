@@ -43,6 +43,7 @@ body{
     color: #ffffff;
     padding: 10px;
     left: 5px;
+    font-family: IRANYekanFN;
 }
 
 .search-box {
@@ -54,6 +55,7 @@ body{
     border: none;
     color: #FFFFFF33;
     background: #121212;
+    font-family: IRANYekanFN;
 }
 
 .search-box i {
