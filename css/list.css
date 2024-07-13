@@ -64,102 +64,186 @@ body{
     color: #FFFFFF33;
 }
 
-.content h2 {
+.division {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.title-division {
+    margin-right: 4.5rem;
+    margin-top: 4rem;
+    color: #FFFFFF;
     font-family: IRANYekanFN;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 900;
-    line-height: 38px;
-    text-align: center;
-    color: #FFFFFF; 
-    margin: 2rem;
-    margin-top: 4rem;   
-}
-
-.content p {
-    font-family: IRANYekanFN;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24.18px;
-    text-align: center;
-    color: #A1A1A1; 
-    margin: 2rem;   
-    width: 446px;
-    height: 78px;
-    margin: auto;
-    margin-bottom: 2rem;    
-}
-
-.form {
-    display: grid;
-    gap: 1.5rem;
-    width: 45.1250rem;
-    height: 33.5625rem;
-    margin: auto;
-    margin-top: 2rem;
-}
-
-.input {
-    height: .8rem;
-}
-.input input {
-    width: 348px;
-    height: 54px;
-    border-radius: 8px;
-    background: #1A1A1A;
-    border: 1px solid #a1a1a139;
-    margin-top: 1rem;
-    font-family: IRANYekanFN;
-    padding: 1rem;
-    color: #A1A1A1;
-    /* border-image: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%); */
-}
-
-
-.input input::placeholder {
-    font-family: IRANYekanFN;
-    padding: 1rem;
-}
-
-
-.input7 {
-    grid-column: 1 / 3;
-}
-
-.input7 input {
-    width: 45.1250rem;
-    height: 12.7500rem;
-    border-radius: 0.5000rem;
-    background: #1A1A1A;
-    border: 1px solid #a1a1a139;
-    margin-top: 1rem;
-    font-family: IRANYekanFN;
-    padding: 1rem;
-    color: #A1A1A1;
-    /* border-image: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%); */
-}
-
-
-
-.input7 input::placeholder {
-    font-family: IRANYekanFN;
-    padding: 1.5rem; 
+    line-height: 31.09px;
+    text-align: right;    
 }
 
 .button {
-    width: 93px;
-    height: 54px;
-    border-radius: 8px;
-    background: #0A0A0A; 
+    margin-left: 5.5rem;
+    margin-top: 4rem;
+    
+}
+
+.button button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.button button {
+    width: 107px;
+    height: 39px;
+    border-radius: 16px;
+    /* border: 1px solid #a1a1a139; */
+    background: none;
+    font-family: IRANYekanFN;
+    font-size: 12px;
     border: none;
+    font-weight: 400;
+    line-height: 24.18px;
+    text-align: right;
+    color: #989898;    
+    /* border-image-source: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%); */
+
+}
+
+.play-list {
+    width: 67rem;
+    height: 81rem;
+    margin: auto;
+    margin-top: 1.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0rem;
+    /* border-image: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%);     */
+}
+
+.video-cart {
+    position: relative;
+    /* border-image-source: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%);      */
+}
+.video-cart img {
+    width: 20rem;
+    height: 12rem;
+    border-radius: 8px;
+    /* border-image-source: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%); */
+}
+
+.video-cart h5 {
+    width: 20rem;
+    height: 1rem;
     font-family: IRANYekanFN;
     font-size: 14px;
+    font-weight: 700;
+    line-height: 27.64px;
+    text-align: right;
+    color: #FFFFFF; 
+    padding-right: 1.5rem;
+    position: absolute;
+    bottom: 7.5rem;
+}
+.p1 {
+    font-family: IRANYekanFN;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20.73px;
+    text-align: right;
+    color: #575757;    
+    position: absolute;
+    bottom: 3.3rem;
+    right: 1.5rem;
+}
+
+.p2 {
+    font-family: IRANYekanFN;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20.73px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    color: #A1A1A1; 
+    position: absolute;
+    left: 4.6rem;
+    bottom: 3.3rem;
+}
+
+.count-page {
+    display: flex;
+    justify-content: center;
+}
+
+.count-page span {
+    font-family: IRANYekanFN;
+    font-size: 12px;
     font-weight: 400;
     line-height: 24.18px;
     text-align: center;
-    color: #FFFFFF;
-    position: absolute;     
-    left: 19.7rem; 
+    color: #989898; 
+    padding: .5rem;   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer {
     width: 1111px;
@@ -267,9 +351,4 @@ footer {
 
 .social-media img {
     margin-right: .8rem;
-}
-
-.error {
-    color: red;
-    font-size: 90%;
 }

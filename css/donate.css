@@ -64,6 +64,7 @@ body{
     color: #FFFFFF33;
 }
 
+
 .content h2 {
     font-family: IRANYekanFN;
     font-size: 22px;
@@ -89,17 +90,22 @@ body{
     margin-bottom: 2rem;    
 }
 
+
+
 .form {
     display: grid;
+    grid-template-columns: auto auto auto;
     gap: 1.5rem;
-    width: 45.1250rem;
-    height: 33.5625rem;
+    width: 70rem;
+    height: 8rem;
     margin: auto;
     margin-top: 2rem;
+    
 }
 
 .input {
     height: .8rem;
+    /* grid-column: 1 / 4; */
 }
 .input input {
     width: 348px;
@@ -108,57 +114,46 @@ body{
     background: #1A1A1A;
     border: 1px solid #a1a1a139;
     margin-top: 1rem;
-    font-family: IRANYekanFN;
-    padding: 1rem;
-    color: #A1A1A1;
+    margin-left: 3rem;
     /* border-image: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%); */
 }
-
 
 .input input::placeholder {
     font-family: IRANYekanFN;
     padding: 1rem;
 }
 
-
-.input7 {
-    grid-column: 1 / 3;
+.line {
+    transform: rotate(360deg);
+    width: 0px;
+    height: 174px;
+    position: absolute;
+    top: 310px;
+    left: 850px;
+    border: 1px solid #494949    
 }
 
-.input7 input {
-    width: 45.1250rem;
-    height: 12.7500rem;
-    border-radius: 0.5000rem;
-    background: #1A1A1A;
-    border: 1px solid #a1a1a139;
-    margin-top: 1rem;
-    font-family: IRANYekanFN;
-    padding: 1rem;
-    color: #A1A1A1;
-    /* border-image: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%); */
-}
-
-
-
-.input7 input::placeholder {
-    font-family: IRANYekanFN;
-    padding: 1.5rem; 
+.line2 {
+    transform: rotate(360deg);
+    width: 0px;
+    height: 174px;
+    position: absolute;
+    top: 310px;
+    left: 430px;
+    border: 1px solid #494949    
 }
 
 .button {
     width: 93px;
     height: 54px;
     border-radius: 8px;
-    background: #0A0A0A; 
-    border: none;
-    font-family: IRANYekanFN;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24.18px;
-    text-align: center;
+    background: #0A0A0A;
     color: #FFFFFF;
-    position: absolute;     
-    left: 19.7rem; 
+    border: none;
+    margin-top: 8rem;
+    position: absolute;
+    left: 38rem;
+    font-family: IRANYekanFN;
 }
 
 footer {
@@ -168,7 +163,7 @@ footer {
     display: flex;
     justify-content: space-between;
     margin: auto;
-    margin-top: 7rem;
+    margin-top: 18rem;
 }
 
 .footer-title {
@@ -267,9 +262,4 @@ footer {
 
 .social-media img {
     margin-right: .8rem;
-}
-
-.error {
-    color: red;
-    font-size: 90%;
 }

@@ -24,6 +24,7 @@ body{
 
 .header-right {
     display: flex;
+    margin-right: 4.5rem;
 }
 
 .navbar {
@@ -49,6 +50,7 @@ body{
 .search-box {
     border-bottom: 1px solid #FFFFFF33;
     height: 25px;
+    margin-left: 7rem;
 }
 
 .search-box input{
@@ -105,7 +107,7 @@ body{
     height: 90px;
     font-size: 52px;
     font-weight: 800;
-    line-height: 89.82px;
+    /* line-height: 89.82px; */
     text-align: left;
     color: #ffffff;
     font-family: IRANYekanFN;
@@ -117,7 +119,7 @@ body{
     height: 193px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 24.18px;
+    /* line-height: 24.18px; */
     color: #BABABA;
     text-align: justify;
 }
