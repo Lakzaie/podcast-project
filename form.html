@@ -10,24 +10,39 @@
     <link rel="stylesheet" href="./fonts/font.css">
 </head>
 <body>
-    <div class="header">
-        <div class="header-right">
-            <img src="./img/Logo.png" alt="Logo.png">
-        <nav class="navbar">
-            <ul>
-                <li>صفحه اصلی</li>
-                <li>پادکست ها</li>
-                <li>ویدئو های کوتاه</li>
-                <li>حمایت</li>
-                <li>همکاری</li>
-            </ul>
+    <header>
+        <nav>
+          <img class="img" src="./img/Logo.png" alt="logo">
+          <ul class="header-ul">
+                  <li><a href="/index.html">صفحه اصلی</a></li>
+                  <li><a href="./list.html">پادکست ها</a></li>
+                  <li><a href="./search.html">ویدئو های کوتاه</a></li>
+                  <li><a href="./donate.html">حمایت</a></li>
+                  <li><a href="./form.html">همکاری</a></li>
+          </ul>
+          <img src="./img/icon/hamburger-menu.svg" class="hamburger-icon" alt="hamburger menu" />
         </nav>
+        
+        <div class="hamburger-menu">
+          <div class="cross-icon">
+            <img src="./img/cross.svg" />
+          </div>
+          <div class="hamburger-menu-items">
+            <ul>
+                  <li><a href="/index.html">صفحه اصلی</a></li>
+                  <li><a href="./list.html">پادکست ها</a></li>
+                  <div></div>
+                  <li><a href="./search.html">ویدئو های کوتاه</a></li>
+                  <li><a href="./donate.html">حمایت</a></li>
+                  <li><a href="./form.html">همکاری</a></li>
+            </ul>
+          </div>
         </div>
-        <div class="search-box">
-            <input type="search" placeholder="جستجو..">
-            <i class="fa fa-search" aria-hidden="true"></i>
-        </div>
-    </div>
+        <div class="search-box" id="search-box">
+          <input type="search" class="search-txt"  placeholder="جستجو..">
+          <img src="./img/icon/Vector_search_icon.svg.png" id="search-icon" alt="">
+      </div> 
+      </header>
     <div class="content">
         <h2>درخواست همکاری با طبقه 16</h2>
         <p>اگر قصد دارید اسپانسر اپیزودهای طبقه شوید و یا تبلیغات در سایت را دارید فرم زیر را تکمیل و برای ما ارسال نمایید.</br>
@@ -35,68 +50,89 @@
     </div>
     <form>
         <div class="form">
-                <div class="input">
-                    <div  id="nameSherkat" ><input type="text" placeholder="نام شرکت "></div> 
-                    <div class="error" id="nameSherkatErr"></div>
-                </div>
-                <div class="input">
-                    <div id="saitSherkat" ><input type="text" placeholder="سایت شرکت"></div> 
-                    <div class="error" id="webErr"></div>
-                </div>
-                <div class="input">
-                    <div id="email" ><input type="text" placeholder="ایمیل سازمانی شرکت"></div> 
-                    <div class="error" id="emailErr"></div>
-                </div>
-                <div class="input">
-                    <div id="phone" ><input type="text" placeholder="شماره تلفن شرکت"></div> 
-                    <div class="error" id="mobileErr"></div>
-                </div>
-                <div class="input">
-                    <div id="name" ><input type="text" placeholder="نام درخواست دهنده"></div> 
-                    <div class="error" id="nameErr"></div>
-                </div>
-                <div class="input">
-                    <div id="semat" ><input type="text" placeholder="سمت درخواست دهنده"></div> 
-                    <div class="error" id="sematErr"></div>
-                </div>
-                <div class="input7" id="aobut" ><input type="text" placeholder="مختصری درباره شرکت"></div> 
+                    <div class="input" >
+                        <input type="text" placeholder="نام شرکت " id="sherkat-name" onkeyup="validateName()">
+                        <span id="nameSherkat-error"></span>
+                    </div> 
+                    <div class="input" >
+                        <input type="text" placeholder="سایت شرکت" id="sait" onkeyup="validateSait()">
+                        <span id="sait-error"></span>
+                    </div> 
+                    
+                    <div class="input" >
+                        <input type="email" placeholder="ایمیل سازمانی شرکت" id="email" onkeyup="validateEmail()">
+                        <span id="email-error"></span>
+                    </div> 
+                    
+                    <div class="input" >
+                        <input type="number" placeholder="شماره تلفن شرکت" id="phone" onkeyup="validatePhone()">
+                        <span id="phone-error"></span>
+                    </div> 
+                    
+                    <div class="input" >
+                        <input type="text" placeholder="نام درخواست دهنده" id="name" onkeyup="validateNameDar()">
+                        <span id="name-error" ></span>
+                    </div> 
+                    <div class="input" >
+                        <input type="text" placeholder="سمت درخواست دهنده" id="semat" onkeyup="validateSemat()">
+                        <span id="semat-error" ></span>
+                    </div> 
+                <div class="input7">
+                    <textarea name="text" placeholder="مختصری درباره شرکت" id="about" cols="45"  rows="12" onkeyup="validateAbout()"></textarea>
+                    <span id="about-error"></span>
+                </div> 
             
         </div>
         
-        <button class="button" id="button">ارسال فرم</button>
+        <button class="button"  type="submit">ارسال فرم</button>
+        <span id="button-error"></span>
     </form>
+    <div class="line"></div>
     <footer>
         <div class="footer-text">
             <div class="footer-title">
-                <div class="icon-img"><img src="./img/Logo.png" alt=""></div>
-                <div class="title-text">پادکست طبقه 16</div>
+                <img src="./img/Logo.png" alt="">
+                <h2 class="title-text">پادکست طبقه 16</h2>
             </div>
-            <div class="text">
                 <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد</p>
-            </div>
         </div>
-        
         <div class="footer-links">
             <h2>لینک ها</h2> 
             <ul>
-                <li><a href="#">صفحه اصلی</a></li>
+                <li><a href="./index.html">صفحه اصلی</a></li>
                 <li><a href="./list.html">پادکست ها</a></li>
-                <li><a href="">ویدیوهای کوتاه</a></li>
+                <li><a href="./search.html">ویدیوهای کوتاه</a></li>
                 <li><a href="./donate.html">حمایت</a></li>
-                <li><a href="./form.html">همکاری</a></li>
+                <li><a href="#">همکاری</a></li>
             </ul>
         </div>
         <div class="medias">
             <div class="listening-media">
                 <h2>اینجا بشنوید</h2>
-                <img src="./img/Group 4.png" alt="">
-             </div>
-            <div class="social-media">
+                <div class="social">
+                  <img src="./img/icon/11.png" alt="">
+                  <img src="./img/icon/22.png" alt="">
+                  <img src="./img/icon/33.png" alt="">
+                  <img src="./img/icon/44.png" alt="">
+                  <img src="./img/icon/55.png" alt="">
+                  <img src="./img/icon/66.png" alt="">
+                </div>
+              </div>
+              <div class="social-media">
                 <h2>شبکه های اجتماعی</h2>
-                <img src="./img/Group 29.png" alt="">
+                <div class="social">
+                  <img src="./img/icon/111.png" alt="">
+                  <img src="./img/icon/222.png" alt="">
+                  <img src="./img/icon/333.png" alt="">
+                  <img src="./img/icon/444.png" alt="">
+                  <img src="./img/icon/555.png" alt="">
+                  <img src="./img/icon/666.png" alt="">
+                </div>
                 </div>
         </div>
     </footer>
+
+    <script src="./js/modul.js"></script>
     <script src="./js/form.js"></script>
 </body>
 </html>

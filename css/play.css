@@ -1,204 +1,723 @@
 :root{
     background: #121212;
-    padding:  2rem 5rem;
 }
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
 body{
-    max-width: 1200px;
-    margin: auto;
+    padding: 2rem;
     font-family: YekanBakh-Bold !important;
-    font-weight: 400;
     direction: rtl;
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+}
+nav {
+  display: flex;
+  justify-content: flex-start;
+}
+nav img:first-child {
+  padding: 8px;
 }
 
-.header-right {
+.header-ul {
     display: flex;
-    margin-right: 4.5rem;
-}
-
-.navbar {
-    display: flex;
-    padding-right: 15px;
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.navbar ul li{
     list-style: none;
+    padding: 0;
+  }
+  
+  .header-ul li {
+    font-size: 14px;
+    margin: 0 15px;
+    height: 20px;
+  }
+  
+  .header-ul li a {
+    cursor: pointer;
+    text-decoration: none;
     font-size: 14px;
     line-height: 21.91px;
     color: #ffffff;
     padding: 10px;
     left: 5px;
-    font-family: IRANYekanFN;
-}
+    font-family: IRANYekanFN;   
+  }
 
+  .hamburger-icon {
+    width: 27px;
+    display: none;
+  }
+  /*------------------------------- hamberger menu */
+  .hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 1;
+    width: 100%;
+    font-family: IRANYekanFN;
+    transform: translateY(-100%);
+  }
+  
+  .cross-icon {
+    width: 100%;
+    text-align: left;
+    padding: 25px 0;
+  }
+  
+  .cross-icon img {
+    width: 20px;
+    margin-left: 30px;
+  }
+  
+  .hamburger-menu-items {
+    padding: 10px 30px;
+  }
+  
+  .hamburger-menu-items ul {
+    list-style: none;
+  }
+  
+  .hamburger-menu-items a {
+    text-decoration: none;
+    color: #303030;
+    display: inline-block;
+    padding: 3px 0;
+  }
+  
+  .hamburger-menu-items div {
+    height: 1px;
+    background-color: #dfe1e4;
+    width: 90%;
+    margin: 8px;
+  }
+
+.show-hamburger-menu {
+   animation: fadeInDown 0.25s forwards;
+  }
+
+/* ----------------------- search box */
 .search-box {
     border-bottom: 1px solid #FFFFFF33;
-    height: 25px;
+    background: #121212;
+    height: 2rem;
+    transition: all .5s ease-in;
+    position: relative;
     width: 200px;
-    margin-left: 7rem;
-}
+  }
+  .search-box img {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
 
 .search-box input{
     border: none;
     color: #FFFFFF33;
-    background: #121212;
     font-family: IRANYekanFN;
-    width: 177px;
+    background: #121212;
+    outline: none;
 }
 
-.search-box i {
-    color: #FFFFFF33;
+.banners {
+    display: flex;
+    justify-content: center;
 }
 
 .banner {
     width: 509px;
-    height: 72px;   
+    height: 72px;  
+    background: #1E1E1E; 
+    margin: 5rem 1rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .banner p {
     font-family: IRANYekanFN;
     font-size: 14px;
     font-weight: 400;
-    line-height: 24.18px;
     text-align: left;
-    background: #FFFFFF;    
+    color: #FFFFFF;    
+}
+.video-player {
+     position: relative;
+}
+.video-player img {
+    width: 8rem;
+    height: 2rem;
+    position: absolute;
+    top: 30rem;
+    right: 5.5rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-footer {
-    width: 1111px;
-    height: 354.5px;
-    border-top: 3px solid #3C3C3C;    
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    margin-top: 7rem;
+video {
+    width: 90%;
+    height: 590px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-right: 3.5rem;
 }
 
-.footer-title {
+.container {
     display: flex;
-    padding: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.description {
+    width: 580px;
+    height: 792px;
+    margin: 2rem .1rem 1rem;   
+    padding-right: 1rem; 
+}
+
+.h2 {
+    display: flex;
+    width: 570.6px;
+    height: 62px;
+    margin-bottom: 1.5rem;
+}
+
+.h2 h2{
     font-family: IRANYekanFN;
-
-}
-
-.icon-img {
-    width: 50px;
-    height: 38.62px;
-    margin-left: 1rem;   
-}
-
-.title-text {
-    width: 162px;
-    height: 38px;
-    font-size: 22px;
-    font-weight: 900;
-    line-height: 38px;
-    text-align: left;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: right;
     color: #FFFFFF;        
 }
 
-.text {
-    width: 298px;
-    height: 193px;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24.18px;
-    text-align: justify;
-    color: #BABABA; 
-    margin-right: 2rem;     
+.h2 :first-child {
+    margin-left: .8rem;
+}
+.h2:last-child {
+    width: 580px;
+
 }
 
-.footer-links {
-    margin-top: 2rem;
-}
-
-.footer-links h2 {
-    width: 77px;
-    height: 38px;
-    font-size: 22px;
-    font-weight: 900;
-    line-height: 38px;
-    text-align: right;
-    color: #FFFFFF;
-    margin-bottom: 1.5rem;
-    margin-right: 1rem;
+.description p {
+    width: 570.6px;
+    height: 24rem;
     font-family: IRANYekanFN;
-}
-
-.footer-links ul li {
-    list-style-type: none;
-    height: 2.5rem;
-    width: 7rem;
-    margin-right: 0px;
-}
-
-.footer-links ul li a{
-    text-decoration: none;
     font-size: 14px;
-    font-weight: 400;
+    text-align: justify; 
+    color: #989898;  
+    direction: ltr;
+    line-height: 1.75rem;
+}
+
+.description a {
+    font-family: IRANYekanFN;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: justify;  
+    color: #989898;
+}
+
+.link1 {
+    display: flex;
+    justify-content: flex-start;
+}
+.link1 a {
+    padding: .2rem;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.link2, .link3, .link4,.link5,.link6,.link7,.link8,.link9 {
+    color: #989898;
+}
+
+.hamian {
+    width: 413px;
+    height: 141px;
+    border: 1px solid #a8a8a825;
+    border-radius: 5px;
+    margin-right: 2.8rem;
+    margin-top: 2rem;
+    background: #171717;
+/* border-image-source: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%); */
+}
+.hamian h2 {
+    width: 158px;
+    height: 31px;
+    font-family: IRANYekanFN;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 31.09px;
     text-align: center;
-    color: #d3cdcd;
+    color: #FFFFFF;  
+    margin: auto;   
+    margin-top: .9rem;
+}
+
+.hamian img {
+    padding: 2rem;
+    margin-right: 1rem;
+}
+
+.playList {
+    margin-right: 2.8rem;
+    margin-top: 2.8rem;
+    width: 413px;
+    height: 651px;
+    border-style: solid;
+    border-image-source: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%)
+}
+
+.title1 {
+    display: flex;
     
 }
 
-.listening-media {
-    margin: .8rem 2rem;
+.title1 img {
+    width: 24px;
+    height: 24px;
+    margin-top: .8rem;
+    margin-left: .8rem;
 }
 
-.listening-media h2 {
+.title1 h2 {
+    width: 158px;
+    height: 31px;
+    font-family: IRANYekanFN;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 31.09px;
+    text-align: right;
+    color: #FFFFFF;  
+    margin-top: .4rem;  
+}
+
+.cart-video {
+    width: 413px;
+    height: 102px;
+    display: flex;
+    margin-top: .8rem;
+    /* border-image-source: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%);        */
+}
+
+.title h2 {
+    width: 211.23px;
+    height: 56px;
+    font-family: IRANYekanFN;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 27.64px;
+    text-align: right;    
+    color: #FFFFFF; 
+    margin-top: .5rem;  
+    margin-right: 0; 
+}
+
+.title h3 {
+    width: 211.23px;
+    height: 21px;
+    font-family: IRANYekanFN;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20.73px;
+    text-align: right;
+    color: #575757;    
+    margin-top: 1.2rem;
+}
+
+.imag img {
+    width: 216px;
+    height: 130px;
+    padding: 0;
+    border-radius: 8px;
+    background: linear-gradient(72.83deg, #121212 2.11%, rgba(0, 0, 0, 0) 98.6%);
+    /* border-image-source: linear-gradient(252.35deg, rgba(255, 255, 255, 0.2) 28.3%, rgba(0, 0, 0, 0) 75.06%);         */
+}
+
+.imag {
+    position: relative;
+}
+
+.imag-play img {
+    width: 45.19px;
+    height: 43px;
+    position: absolute;
+    z-index: 2;
+    left: 5.3rem;
+    top: 2.3rem;
+    background: none;
+}
+
+button {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-family: IRANYekanFN;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24.18px;
+    text-align: right;
+    color: #989898;    
+}
+
+.button {
+    margin-right: 10.8rem;
+    margin-top: 2rem;
+}
+
+.social-medi {
+    width: 590px;
+    height: 155px;
+    border: 1px solid #a1a1a139;
+    border-radius: 20px;
+    margin-right: 2rem;
+    margin-top: 5rem;
+    /* border-image-source: linear-gradient(225.53deg, rgba(255, 255, 255, 0.2) 1.7%, rgba(0, 0, 0, 0) 96.61%); */
+}
+
+.social-medi h2 {
+    font-family: IRANYekanFN;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 38px;
+    text-align: right;
+    color: #FFFFFF;    
+    margin: 1rem 1.1rem;
+}
+
+.logo-hamian {
+    width: 530.83px;
+    padding: 0px;
+    margin-right: 1.7rem;
+    display: flex;
+    justify-content: space-between;    
+}
+
+.logo-hamian img {
+    transition: all .2s ease-in;
+}
+
+.logo-hamian img:hover {
+    transform: scale(1.3);
+    cursor: pointer;
+}
+/* -----------------------footer */
+.line {
+  height: 1px;
+  background-color: #3C3C3C;
+  width: 90%;
+  margin: auto;
+  margin-top: 8rem;
+}
+footer {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr;
+    column-gap: 1rem;
+  }
+  .footer-text, .footer-links, .medias {
+    margin: auto;
+    margin-top: 1rem;
+    font-family: IRANYekanFN;
+    padding: 2rem;
+  }
+  .footer-text {
+    margin-right: 2rem;
+  }
+  .footer-text img {
+    height: 40px;
+  }
+  .footer-text h2{
+    margin: 0;
+    margin-right: 1rem;
+    color: #FFFFFF;
+    font-family: IRANYekanFN;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 38px;
+    text-align: left;  
+  }
+  .footer-text p {
+    text-align: justify;
+    font-family: IRANYekanFN;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24.18px;
+    color: #BABABA;
+  }
+  .footer-title {
+    display: flex;
+  }
+  .footer-links h2{
     font-family: IRANYekanFN;
     font-size: 22px;
     font-weight: 900;
     line-height: 38px;
     text-align: right;
     color: #FFFFFF;
-    padding: 1.5rem 0rem;
-}
-.listening-media img {
-    margin-right: .8rem;
-}
-
-.social-media {
-    margin: 1.5rem 2rem;
-}
-
-.social-media h2 {
+    margin: 0;
+  }
+  .footer-links ul {
+    padding: 0;
+  }
+  .footer-links ul li {
+    list-style: none;
+    margin-top: 1rem;
+  }
+  .footer-links ul li a {
+    text-decoration: none;
+    font-family: IRANSansWeb;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: right;
+    color: #d3cdcd;
+  }
+  .medias h2 {
     font-family: IRANYekanFN;
     font-size: 22px;
     font-weight: 900;
     line-height: 38px;
     text-align: right;
     color: #FFFFFF;
-    padding: 1rem 0rem;
-}
+  }
+  .social img{
+    margin-right: 1rem;
+  }
+  
+  .social img:nth-child(3){
+    filter: grayscale(100%);
+  }
+  
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
-.social-media img {
-    margin-right: .8rem;
-}
+  @media (max-width: 1200px) {
+    .header-ul li {
+      margin: 0;
+    }
+  }
+  @media (max-width: 1000px) {
+    .header-ul {
+      display: none;
+    }
+    
+    .hamburger-icon {
+      display: block;
+    }
+    header {
+      width: auto;
+      padding: 10px 8px;
+    }
+    .img {
+      display: none;
+    }
+    .search-box {
+      border: none;
+    }
+    .search-box input {
+      display: none;
+    }
+    .search-box.active {
+      border-bottom: 1px solid #FFFFFF33;
+      height: 2rem;
+      width: 10rem;
+    }
+    .search-box.active > .search-txt {
+      display: block;
+    }
+    video {
+      margin-right: 3rem;
+    }
+    .playList-hamian {
+      margin-top: 4rem;
+    }
+    .social-medi {
+      margin: auto;
+      margin-top: 6rem;
+    }
+      footer{
+        grid-template-columns: 4fr 2fr;
+      }
+  }
+  
+  @media (max-width: 900px) {
+    video {
+      margin-right: 2rem;
+    }
+    .links {
+      display: none;
+    }
+    .description {
+      width: 500px;
+      height: 500px;
+    }
+    .h2 {
+      margin: auto;
+    }
+    .h2:last-child {
+      width: 500px;
+    }
+    .description p {
+      width: 500px;
+      margin: auto;
+      margin-top: 2rem;
+    }
+    .social-medi {
+      width: 500px;
+      margin-top: 10rem;
+    }
+    .logo-hamian {
+      width: 450px;
+    }
+    .logo-hamian img {
+      width: 40px;
+      margin-top: 1rem;
+    }
+    footer {
+      grid-template-columns: 4fr 2fr;
+      margin-right: 2rem;
+    }
+    .social {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+    }
+    
+  }
+
+  @media (max-width: 500px) {
+    .video-player img {
+      top: 10rem;
+      right: 2rem;
+      width: 60px;
+      height: 20px;
+    }
+  }
+  @media (max-width: 600px){
+    video {
+      margin-right: 1.6rem;
+      height: 15rem;
+    }
+    .social-medi {
+      width: 30rem;
+    }
+    .logo-hamian {
+      width: 420px;
+    }
+    .logo-hamian img {
+      height: 40px;
+      margin-top: 1rem;
+    }
+    footer {
+      grid-template-columns: 1fr;
+      margin: 0;
+    }
+   .footer-links, .medias {
+      padding: 0rem;
+    }
+  }
+  @media (max-width: 412px) {
+    body {
+      margin: 0;
+      padding: 0 0 20px 0;
+    }
+    .container {
+      width: 350px;
+    }
+    
+    .container h1 {
+      font-size: 3rem;
+    }
+    video {
+      margin-right: 2.5rem;
+      width: 80%;
+      height: 12rem;
+    }
+    .video-player img {
+      width: 4rem;
+      height: 1rem;
+      top: 7rem;
+      right: 3rem;
+  }
+    .h2:last-child {
+      width: 300px;
+    }
+    .h2 h2 {
+      font-size: 15px;
+    }
+    .description {
+      width: 300px;
+      /* height: 50rem; */
+      padding: 0;
+    }
+    .container-text p{
+      height: 45rem;
+    }
+    .description p, .links{
+      width: 300px;
+    }
+    .playList-hamian {
+      margin-top: 30rem;
+    }
+    .hamian {
+      width: 300px;
+      margin-right: 1.5rem;
+    }
+    .hamian img {
+      width: 130px;
+      margin: 0;
+    }
+    .playList {
+      margin: 4rem 0;
+      width: 350px;
+    }
+    .cart-video {
+      width: 350px;
+      height: 130px;
+    }
+    .title {
+      width: 8rem;
+    }
+    .title h2 {
+      width: 145px;
+      font-size: 13px;
+      font-weight: 400;
+    }
+    .button {
+      margin-right: 9rem;
+    }
+    .social-medi {
+      width: 300px;
+      margin-top: 10rem;
+    }
+    .logo-hamian {
+      width: 250px;
+    }
+    .logo-hamian img {
+      width: 30px;
+      height: 30px;
+    }
+    footer {
+      grid-template-columns: 2fr;
+      margin: 0;
+    }
+  }

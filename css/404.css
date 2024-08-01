@@ -1,0 +1,316 @@
+:root{
+    background: #121212;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    padding: 2rem;
+    font-family: YekanBakh-Bold !important;
+    direction: rtl;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+}
+nav {
+  display: flex;
+  justify-content: flex-start;
+}
+nav img:first-child {
+  padding: 8px;
+}
+
+.header-ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .header-ul li {
+    font-size: 14px;
+    margin: 0 15px;
+    height: 20px;
+  }
+  
+  .header-ul li a {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 21.91px;
+    color: #ffffff;
+    padding: 10px;
+    left: 5px;
+    font-family: IRANYekanFN;   
+  }
+
+  .hamburger-icon {
+    width: 27px;
+    display: none;
+  }
+  /*------------------------------- hamberger menu */
+  .hamburger-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgb(20, 19, 19);
+    z-index: 1;
+    width: 100%;
+    font-family: IRANYekanFN;
+    transform: translateY(-100%);
+  }
+  
+  .cross-icon {
+    width: 100%;
+    text-align: left;
+    padding: 25px 0;
+  }
+  
+  .cross-icon img {
+    width: 20px;
+    margin-left: 30px;
+  }
+  
+  .hamburger-menu-items {
+    padding: 10px 30px;
+  }
+  
+  .hamburger-menu-items ul {
+    list-style: none;
+  }
+  
+  .hamburger-menu-items a {
+    text-decoration: none;
+    color:#ffffff;
+    display: inline-block;
+    padding: 3px 0;
+  }
+  
+  .hamburger-menu-items div {
+    height: 1px;
+    background-color: #dfe1e4;
+    width: 90%;
+    margin: 8px;
+  }
+
+.show-hamburger-menu {
+   animation: fadeInDown 0.25s forwards;
+  }
+
+/* ----------------------- search box */
+.search-box {
+    border-bottom: 1px solid #FFFFFF33;
+    background: #121212;
+    height: 2rem;
+    transition: all .5s ease-in;
+    position: relative;
+    width: 200px;
+  }
+  .search-box img {
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+
+.search-box input{
+    border: none;
+    color: #FFFFFF33;
+    font-family: IRANYekanFN;
+    background: #121212;
+    outline: none;
+}
+
+
+/*-------------------------- container */
+.container h1 {
+    font-family: IRANYekanFN;
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 124.36px;
+    text-align: center;
+    color: #FFFFFF;     
+}
+
+.container p {
+    font-family: IRANYekanFN;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24.18px;
+    text-align: center;
+    color: #A1A1A1;       
+}
+/* ------------------------footer */
+.line {
+  height: 1px;
+  background-color: #3C3C3C;
+  width: 90%;
+  margin: auto;
+  margin-top: 8rem;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr;
+  column-gap: 1rem;
+}
+.footer-text, .footer-links, .medias {
+  margin: auto;
+  margin-top: 1rem;
+  font-family: IRANYekanFN;
+  padding: 2rem;
+}
+.footer-text {
+  margin-right: 2rem;
+}
+.footer-text img {
+  height: 40px;
+}
+.footer-text h2{
+  margin: 0;
+  margin-right: 1rem;
+  color: #FFFFFF;
+  font-family: IRANYekanFN;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 38px;
+  text-align: left;  
+}
+.footer-text p {
+  text-align: justify;
+  font-family: IRANYekanFN;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24.18px;
+  color: #BABABA;
+}
+.footer-title {
+  display: flex;
+}
+.footer-links h2{
+  font-family: IRANYekanFN;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 38px;
+  text-align: right;
+  color: #FFFFFF;
+  margin: 0;
+}
+.footer-links ul {
+  padding: 0;
+}
+.footer-links ul li {
+  list-style: none;
+}
+.footer-links ul li a {
+  text-decoration: none;
+  font-family: IRANSansWeb;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.91px;
+  text-align: right;
+  color: #d3cdcd;
+}
+.medias h2 {
+  font-family: IRANYekanFN;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 38px;
+  text-align: right;
+  color: #FFFFFF;
+}
+.social img{
+  margin-right: 1rem;
+}
+
+.social img:nth-child(3){
+  filter: grayscale(100%);
+}
+
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1200px) {
+  .header-ul li {
+    margin: 0;
+  }
+}
+@media (max-width: 1000px) {
+  .header-ul {
+    display: none;
+  }
+  
+  .hamburger-icon {
+    display: block;
+  }
+  header {
+    width: auto;
+    padding: 10px 8px;
+  }
+  .img {
+    display: none;
+  }
+  .search-box {
+    border: none;
+  }
+  .search-box input {
+    display: none;
+  }
+  .search-box.active {
+    border-bottom: 1px solid #FFFFFF33;
+    height: 2rem;
+    width: 10rem;
+  }
+  .search-box.active > .search-txt {
+    display: block;
+  }
+    footer{
+      grid-template-columns: 4fr 2fr;
+    }
+}
+
+@media (max-width: 900px) {
+  footer {
+    grid-template-columns: 4fr 2fr;
+    margin-right: 2rem;
+  }
+  .social {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  footer {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+ .footer-links, .medias {
+    padding: 0rem;
+  }
+}
+@media (max-width: 412px) {
+  body {
+    margin: 0;
+    padding: 0 0 20px 0;
+  }
+  .container h1 {
+    font-size: 3rem;
+  }
+}
